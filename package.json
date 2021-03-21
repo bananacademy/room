@@ -2,7 +2,7 @@
   "name": "Agora-Edu-Web",
   "version": "5.4.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://bananacademy.github.io/room/",
   "main": "./src/index.tsx",
   "agora_electron": {
     "platform": "darwin",
@@ -95,7 +95,9 @@
     "analyze": "source-map-explorer 'build/static/js/*.js'",
     "eject": "react-scripts eject",
     "pack:mac": "npm run electron:build && electron-builder --mac",
-    "pack:win": "npm run electron:build && electron-builder --win"
+    "pack:win": "npm run electron:build && electron-builder --win",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
